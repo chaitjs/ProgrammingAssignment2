@@ -8,15 +8,15 @@
 ## It returns of list of functions viz. set(),get(),setInverse(),getInverse(). 
 
 makeCacheMatrix <- function(x = matrix()) {
-        inv_mat <- NULL						
-        set <- function(y) {
-                mat <<- y
-                inv_mat <<- NULL
+        inv_mat <- NULL				## Assign initial value NULL to the inverse matrix variable		
+        set <- function(y) {                    ## Define the set function. 
+                mat <<- y                       ## Use `<<-` to assign a value to an object in an environment
+                inv_mat <<- NULL                ## other than current environment
         }
-        get <- function() mat
-        setInverse <- function(inverse) inv_mat <<- inverse
-        getInverse <- function() inv_mat
-        list(set = set,
+        get <- function() mat                   ## Define get function to get the matrix.
+        setInverse <- function(inverse) inv_mat <<- inverse     ## Set the inverse of a matrix to inverse-matrix-variable
+        getInverse <- function() inv_mat                        ## Define the getInverse function which returns the matrix inverse
+        list(set = set,                                         ## Return the list containing all the function defined above.
              get = get,
              setInverse = setInverse,
              getInverse = getInverse)
