@@ -40,3 +40,4 @@ cacheSolve <- function(x, ...) {
         x$setInverse(inv_mat)                           ## Once inverse is found, set its value using 'setInverse' function.
         inv_mat                                         ## Finally return the Inverse of matrix
 }
+ 
